@@ -2,11 +2,11 @@ package co.edu.uniquindio.poo.model;
 
 public abstract class Directivo {
 
-    public Directivo siguiente;
+    protected Directivo siguiente;
 
-    public abstract void setSiguiente(Directivo siguiente);
-
-    public void aprobarPresupuesto(int presupuesto) {
-
+    public void setSiguiente(Directivo siguiente) {
+        this.siguiente = siguiente;
     }
+
+    public abstract String aprobar(int presupuesto);
 }
