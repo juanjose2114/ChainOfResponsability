@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="15"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="co.edu.uniquindio.poo.viewcontroler.InicioController"
+      prefWidth="500"
+      prefHeight="400">
+
+    <Label text="Cadena de Responsabilidad"
+           style="-fx-font-size: 22px; -fx-font-weight: bold;"/>
+
+    <TextField fx:id="txtPresupuesto"
+               promptText="Ingrese el presupuesto"
+               maxWidth="250"/>
+
+    <Button text="Aprobar Presupuesto"
+            onAction="#aprobarPresupuesto"
+            prefWidth="200"/>
+
+    <TextArea fx:id="txtResultado"
+              editable="false"
+              prefWidth="350"
+              prefHeight="180"/>
+
+</VBox>

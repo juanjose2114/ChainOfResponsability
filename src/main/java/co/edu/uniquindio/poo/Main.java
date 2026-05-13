@@ -1,21 +1,23 @@
 package co.edu.uniquindio.poo;
 
-import co.edu.uniquindio.poo.model.*;
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    static void main() {
+public class Main extends Application {
 
-        Directivo ejecutivo = new Ejecutivo();
-        Directivo gerente = new Getente();
-        Directivo vicepresidente = new Viceprecidente();
-        Directivo presidente = new Presidente();
+    @Override
+    public void start(Stage stage) throws Exception {
 
-        ejecutivo.setSiguiente(gerente);
-        gerente.setSiguiente(vicepresidente);
-        vicepresidente.setSiguiente(presidente);
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("/inicio.fxml"));
+        Scene scene = new Scene(loader.load());
+        stage.setTitle("Cadena de Responsabilidad");
+        stage.setScene(scene);
+        stage.show();
+    }
 
-        ejecutivo.aprobarPresupuesto(199);
+    public static void main(String[] args) {
+        launch(args);
     }
 }
