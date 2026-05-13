@@ -1,4 +1,4 @@
-package co.edu.uniquindio.poo;
+package co.edu.uniquindio.poo.viewcontroler;
 
 import co.edu.uniquindio.poo.model.*;
 import javafx.fxml.FXML;
